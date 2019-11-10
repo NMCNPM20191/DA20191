@@ -17,6 +17,34 @@ public class DanhGia implements Serializable {
 
 	private static final long serialVersionUID = -1000119078147252957L;
 	 
+	@Id
+    @Column(name = "IdDanhGia", length = 20, nullable = false)
+    private int idDanhGia;
+ 
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "IdNhiemVu", nullable = false, //
+            foreignKey = @ForeignKey(name = "IdNhiemVu"))
+    private NhiemVu nhiemvu;
+    
+    @Column(name = "NoiDung",length =225, nullable = false)
+    private String noidung;
+    
+    @Column(name = "TieuChi1",length =225, nullable = false)
+    private String tieuchi1;
+    
+    @Column(name = "TieuChi2",length =225, nullable = false)
+    private String tieuchi2;
+    
+    @Column(name = "TieuChi3",length =225, nullable = false)
+    private String tieuchi3;
+    
+    @Column(name = "TrungBinh",length =225, nullable = false)
+    private String trungbinh;
+    
+    @Column(name = "File",length =225, nullable = false)
+    private String file;
+
     public int getIdDanhGia() {
 		return idDanhGia;
 	}
@@ -65,34 +93,7 @@ public class DanhGia implements Serializable {
 		this.trungbinh = trungbinh;
 	}
 
-	@Id
-    @Column(name = "IdDanhGia", length = 20, nullable = false)
-    private int idDanhGia;
- 
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "IdNhiemVu", nullable = false, //
-            foreignKey = @ForeignKey(name = "IdNhiemVu"))
-    private NhiemVu nhiemvu;
-    
-    @Column(name = "NoiDung",length =225, nullable = false)
-    private String noidung;
-    
-    @Column(name = "TieuChi1",length =225, nullable = false)
-    private String tieuchi1;
-    
-    @Column(name = "TieuChi2",length =225, nullable = false)
-    private String tieuchi2;
-    
-    @Column(name = "TieuChi3",length =225, nullable = false)
-    private String tieuchi3;
-    
-    @Column(name = "TrungBinh",length =225, nullable = false)
-    private String trungbinh;
-    
-    @Column(name = "File",length =225, nullable = false)
-    private String file;
-
+	
 	
 
 	public String getNoidung() {

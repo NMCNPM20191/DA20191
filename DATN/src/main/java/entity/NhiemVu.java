@@ -27,7 +27,7 @@ public class NhiemVu implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "IdDeTai", nullable = false, //
             foreignKey = @ForeignKey(name = "IdDeTai"))
-    private Detai detai;
+    private DeTai detai;
     
  
     @Column(name = "TenNhiemVu",length =225, nullable = false)
@@ -53,11 +53,11 @@ public class NhiemVu implements Serializable {
 		this.idnhiemvu = idnhiemvu;
 	}
 
-	public Detai getDetai() {
+	public DeTai getDetai() {
 		return detai;
 	}
 
-	public void setDetai(Detai detai) {
+	public void setDetai(DeTai detai) {
 		this.detai = detai;
 	}
 

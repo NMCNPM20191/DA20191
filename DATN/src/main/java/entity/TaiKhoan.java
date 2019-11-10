@@ -1,7 +1,6 @@
 package entity;
  
 import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,21 +21,12 @@ public class TaiKhoan implements Serializable {
     @Id
     @Column(name = "IdTaiKhoan", length = 20, nullable = false)
     private String idTaiKhoan;
-    
-    @Column(name = "Ten", length = 45, nullable = false)
-    private String ten;
-    
-    @Column(name = "Namsinh", length = 20, nullable = false)
-    private Date namsinh;
-    
+  
     @Column(name = "Email", length = 45, nullable = false)
     private String email;
  
     @Column(name = "Encrypted_Password", length = 128, nullable = false)
     private String encrytedPassword;
-    
-    @Column(name = "SoDienThoai", length = 45, nullable = false)
-    private String sodienthoai;
  
     @Column(name = "Active", length = 1, nullable = false)
     private boolean active;
@@ -44,8 +34,6 @@ public class TaiKhoan implements Serializable {
     @Column(name = "Role", length = 20, nullable = false)
     private String role;
  
-    @Column(name = "AnhDaiDien", length = 45, nullable = false)
-    private String anhdaidien;
     
     public String getIdTaiKhoan() {
 		return idTaiKhoan;
@@ -55,44 +43,12 @@ public class TaiKhoan implements Serializable {
 		this.idTaiKhoan = idTaiKhoan;
 	}
 
-	public String getTen() {
-		return ten;
-	}
-
-	public void setTen(String ten) {
-		this.ten = ten;
-	}
-
-	public Date getNamsinh() {
-		return namsinh;
-	}
-
-	public void setNamsinh(Date namsinh) {
-		this.namsinh = namsinh;
-	}
-
 	public String getEmail() {
 		return email;
 	}
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	public String getSodienthoai() {
-		return sodienthoai;
-	}
-
-	public void setSodienthoai(String sodienthoai) {
-		this.sodienthoai = sodienthoai;
-	}
-
-	public String getAnhdaidien() {
-		return anhdaidien;
-	}
-
-	public void setAnhdaidien(String anhdaidien) {
-		this.anhdaidien = anhdaidien;
 	}
 
 	public String getEncrytedPassword() {

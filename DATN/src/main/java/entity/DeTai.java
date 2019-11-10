@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "DeTai")
-public class Detai implements Serializable {
+public class DeTai implements Serializable {
 
 	private static final long serialVersionUID = -1000119078147252957L;
 	 
@@ -29,6 +29,9 @@ public class Detai implements Serializable {
     
     @Column(name = "File",length =225, nullable = false)
     private String file;
+    
+    @Column(name = "TrangThai",length =225, nullable = false)
+    private String trangthai;
     
     public int getIdDeTai() {
 		return idDeTai;
@@ -77,8 +80,4 @@ public class Detai implements Serializable {
 	public void setTrangthai(String trangthai) {
 		this.trangthai = trangthai;
 	}
-
-	@Column(name = "TrangThai",length =45, nullable = false)
-    private String trangthai;
-    
 }
